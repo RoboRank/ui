@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# allows all webcrawlers access to anything on the site
+User-agent: *
+Disallow:
