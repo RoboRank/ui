@@ -1,0 +1,25 @@
+{
+    "short_name": "RoboRank",
+    "name": "RoboRank",
+    "icons": [
+        {
+            "src": "roborank.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "roborank.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "logo.svg",
+            "type": "image/png",
+            "sizes": "150x150"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
