@@ -31,7 +31,8 @@
   font-size: 6vh;
   display: flex;
   justify-content: left;
-  padding: 0.25em;
+  padding-left: 0.5em;
+  padding-top: 0;
   margin-bottom: 0.5em;
   background-color: #282c34;
   color: rgb(213, 236, 5);

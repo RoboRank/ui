@@ -19,20 +19,29 @@ export default function DomainContainer() {
 
     const domains = [
         {
+            id: 0,
             name: "Robot Modeling",
             description: "The details..."
         },
         {
-            name: "Rigid-Body Motion"
+            id: 1,
+            name: "Rigid-Body Motion",
+            description: "The details..."
         },
         {
-            name: "Forward Kinematics"
+            id: 2,
+            name: "Forward Kinematics",
+            description: "The details..."
         },
         {
-            name: "Inverse Kinematics"
+            id: 3,
+            name: "Inverse Kinematics",
+            description: "The details..."
         },
         {
-            name: "Dynamics"
+            id: 4,
+            name: "Dynamics",
+            description: "The details..."
         },
         {
             name: "Trajectory Generation"
