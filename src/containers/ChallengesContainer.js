@@ -31,15 +31,45 @@ export default function ChallengesContainer() {
                         "This challenge is aimed at developing familiarity with components and basic concepts in robot modeling. It will help develop domain specific vocabulary. Complete the functions in the code block below in order to return the appropiate solution corresponding to the challenge scene above the code block.",
                         "An overview of the relevant topic is provided below. Use what you know about robotics along with what has been provided to come up with the best solution and then return it from the functions in the code block below."
                     ],
-                    image: "https://roborank.s3-us-west-1.amazonaws.com/challenges/dof.PNG",
+                    image: "https://roborank.s3-us-west-1.amazonaws.com/nomenclature.png",
+                    notes: "https://roborank.s3-us-west-1.amazonaws.com/challenges/dof.PNG",
                     challenge: "https://roborank.s3-us-west-1.amazonaws.com/challenges/mechanisms.PNG",
                     directions: [
                         "Return the proper name of the robot joint or the appropriate number of degrees of freedom of each mechanism.",
-                    ]
+                    ],
+                    code: `#include <iostream>
+#include <memory>
+#include <stack>
+
+using namespace std;
+
+vector<string> joints()
+{
+    vector<string> joint_names;
+    /*
+        Return the type of one of the joints contained in each frame starting
+        from the top and stopping before the last three objects, i.e. ignore
+        the last three images.
+    */
+    return joint_names;
+}
+
+vector<int> degrees_of_freedom()
+{
+    vector<int> dof;
+    /*
+        Calculate the degrees of freedom of each of the last three objects using
+        Grubler's formula. Return it in a vector of ints in the same order as the
+        images.
+    */
+    return dof;
+}
+                    `
                 },
                 {
                     id: 1,
-                    name: "know it all"
+                    name: "know it all",
+                    image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
                 }
             ]
         },

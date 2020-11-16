@@ -33,7 +33,6 @@ const cardStyles = makeStyles(() => ({
 
 export default function ChallengeCard(props) {
     const classes = cardStyles();
-    console.log(props.challenge.image)
     return (
         <div>
             <Card className={classes.root}>
@@ -59,7 +58,7 @@ export default function ChallengeCard(props) {
                 <CardMedia
                     component="img"
                     alt={props.challenge.name}
-                    image={props.challenge.image}
+                    image={props.challenge.notes}
                     title={props.challenge.name}
                 />
             </Card>
@@ -91,7 +90,7 @@ export default function ChallengeCard(props) {
                     title={props.challenge.name}
                 />
             </Card>
-            <CodeBlock/>
+            <CodeBlock code={props.challenge.code}/>
         </div>
     )
 };

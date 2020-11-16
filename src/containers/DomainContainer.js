@@ -21,30 +21,36 @@ export default function DomainContainer() {
         {
             id: 0,
             name: "Robot Modeling",
-            description: "The details..."
+            description: "The details...",
+            image: "https://roborank.s3-us-west-1.amazonaws.com/robots.jpg"
         },
         {
             id: 1,
             name: "Rigid-Body Motion",
-            description: "The details..."
+            description: "The details...",
+            image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
         },
         {
             id: 2,
             name: "Forward Kinematics",
-            description: "The details..."
+            description: "The details...",
+            image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
         },
         {
             id: 3,
             name: "Inverse Kinematics",
-            description: "The details..."
+            description: "The details...",
+            image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
         },
         {
             id: 4,
             name: "Dynamics",
-            description: "The details..."
+            description: "The details...",
+            image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
         },
         {
-            name: "Trajectory Generation"
+            name: "Trajectory Generation",
+            image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
         },
     ]
     return (

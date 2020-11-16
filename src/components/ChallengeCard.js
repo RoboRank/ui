@@ -28,7 +28,7 @@ export default function ChallengeCard(props) {
                         component="img"
                         alt="Contemplative Reptile"
                         height="240"
-                        image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
+                        image={props.challenge.image}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
