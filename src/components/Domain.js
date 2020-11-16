@@ -28,7 +28,7 @@ export default function Domain(props) {
                         component="img"
                         alt="Contemplative Reptile"
                         height="140"
-                        image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
+                        image={props.domain.image}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
@@ -43,6 +43,6 @@ export default function Domain(props) {
                 {/* <CardActions>
             </CardActions> */}
             </Card>
-        )}/>
+        )} />
     )
 };
