@@ -32,8 +32,12 @@ export default function ChallengesContainer() {
                         "An overview of the relevant topic is provided below. Use what you know about robotics along with what has been provided to come up with the best solution and then return it from the functions in the code block below."
                     ],
                     image: "https://roborank.s3-us-west-1.amazonaws.com/nomenclature.png",
-                    notes: "https://roborank.s3-us-west-1.amazonaws.com/challenges/dof.PNG",
-                    challenge: "https://roborank.s3-us-west-1.amazonaws.com/challenges/mechanisms.PNG",
+                    notes: [
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/dof.PNG"
+                    ],
+                    challenges: [
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/mechanisms.PNG",
+                    ],
                     directions: [
                         "Return the proper name of the robot joint or the appropriate number of degrees of freedom of each mechanism.",
                     ],
@@ -68,8 +72,62 @@ vector<int> degrees_of_freedom()
                 },
                 {
                     id: 1,
-                    name: "know it all",
-                    image: "https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
+                    name: "Configuration Space",
+                    image: "https://roborank.s3-us-west-1.amazonaws.com/moebius_surface.jpg",
+                    description: [
+                        "The challenge was designed to develop an understanding of configuration space topology. It requires the ability to discern the task spaces and workspaces of different mechanisms and robots and identify the topology of different systems.",
+                        "An overview of the relevant topic is provided below. Use what you know about robotics along with what has been provided to come up with the best solution and then return it from the functions in the code block below."
+                    ],
+                    notes: [
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/c-space-notes-1.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/c-space-notes-2.png"
+                    ],
+                    challenges: [
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/football.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/soccer-field.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/toroid.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/robot-arm.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/r2d2.png",
+                        "https://roborank.s3-us-west-1.amazonaws.com/challenges/3d-printer.png"
+                    ],
+                    directions: [
+                        "Return the appropriate topology of the first three objects in order from the top item to the third item. Then, for the next two items, return the workspace topology. For the last item, return the taskspace topology.",
+                        "The code block gives further guidance as the to the formatting requirements."
+                    ],
+                    code: `#include <iostream>
+#include <iostream>
+#include <memory>
+#include <stack>
+
+using namespace std;
+
+vector<string> topology()
+{
+    vector<string> topologies;
+    /*
+        Return the topologies of the first three object. Do not worry about the small details of the objects, but instead, infer the topology of the general shape. Use the two character abbreviations of general topological spaces. For example, the string, S2, would refer to a sphere while S1 refers to a circle.
+    */
+    return topologies;
+}
+
+vector<int> workspace()
+{
+    vector<int> workspace;
+    /*
+        Return the workspace topologies of the next two items using the same abbreviated format as the topologies() function.
+    */
+    return workspace;
+}
+
+vector<int> taskspace()
+{
+    vector<int> taskspace;
+    /*
+        Return the taskspace topology of the last item using the same abbreviated format as the topologies() function.
+    */
+    return taskspace;
+}
+                    `
                 }
             ]
         },

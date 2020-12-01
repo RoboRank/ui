@@ -55,12 +55,15 @@ export default function ChallengeCard(props) {
                 </CardContent>
             </Card>
             <Card className={classes.root}>
-                <CardMedia
+                {props.challenge.notes.map(note =>
+                (<CardMedia
                     component="img"
                     alt={props.challenge.name}
-                    image={props.challenge.notes}
+                    image={note}
                     title={props.challenge.name}
-                />
+                />)
+                )}
+
             </Card>
             <br/>
             <Card className={classes.root3}>
@@ -82,14 +85,16 @@ export default function ChallengeCard(props) {
                     )}
                 </CardContent>
             </Card>
-            <Card className={classes.root}>
+            {props.challenge.challenges.map(c =>
+            (<Card className={classes.root}>
                 <CardMedia
                     component="img"
                     alt={props.challenge.name}
-                    image={props.challenge.challenge}
+                    image={c}
                     title={props.challenge.name}
                 />
-            </Card>
+            </Card>)
+            )}
             <CodeBlock code={props.challenge.code}/>
         </div>
     )
