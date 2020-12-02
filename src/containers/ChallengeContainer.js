@@ -17,7 +17,6 @@ export default function ChallengeContainer(props) {
     const classes = useStyles();
     const [spacing] = React.useState(2);
     const id = parseInt(useParams()["id"]);
-    console.log(props.location.state)
     return (
         <Grid container className={classes.root} spacing={1}>
             <Grid item xs={12}>

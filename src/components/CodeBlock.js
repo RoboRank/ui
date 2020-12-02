@@ -7,12 +7,15 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Judge from './Judge';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/theme/darcula.css';
 import 'codemirror/mode/clike/clike';
 import './code.css'
+
+import { judge } from '../services/judge';
 
 const cardStyles = makeStyles(() => ({
     root: {
@@ -26,6 +29,13 @@ const cardStyles = makeStyles(() => ({
 export default function CodeBlock(props) {
     const classes = cardStyles();
     const [feedback, setFeedback] = useState(false);
+    const [result, setResult] = useState({
+        correct: false,
+        incorrect: []
+    });
+    const [submission, setSubmission] = useState({
+        code: "waiting on code..."
+    });
 
     return (
         <div>
@@ -40,28 +50,29 @@ export default function CodeBlock(props) {
                             lineNumbers: true,
                             scrollbarStyle: 'null',
                             lineWrapping: true,
+                            indentUnit: 4
                         }}
                         className='.CodeMirror'
                         onChange={(editor, data, value) => {
+                            setSubmission({
+                                code: value
+                            });
                         }}
                     />
                 </CardContent>
                 <Button variant="contained" style={{ background: "#f44336", color: "white", float: 'right', marginRight: '2.5em', marginBottom: '1em' }} onClick={() => {
-                    setFeedback(!feedback);
+                    judge(props.route, submission)
+                        .then(res => {
+                            setResult(res);
+                            setFeedback(!feedback);
+                        })
                 }}>
                     Submit
                 </Button>
-                {
-                    feedback &&
-                        <CardContent>
-                            <br />
-                            <br />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                Congratulations!!! You've completed the challenge.
-                            </Typography>
-                        </CardContent>
-                }
             </ Card>
+            {
+                feedback && <Judge data={result} />
+            }
         </div>
     )
 };

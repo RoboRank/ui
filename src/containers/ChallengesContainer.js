@@ -26,6 +26,7 @@ export default function ChallengesContainer() {
             challenges: [
                 {
                     id: 0,
+                    route: "joints",
                     name: "Nomenclature & Topology",
                     description: [
                         "This challenge is aimed at developing familiarity with components and basic concepts in robot modeling. It will help develop domain specific vocabulary. Complete the functions in the code block below in order to return the appropiate solution corresponding to the challenge scene above the code block.",
@@ -44,6 +45,7 @@ export default function ChallengesContainer() {
                     code: `#include <iostream>
 #include <memory>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
@@ -68,10 +70,23 @@ vector<int> degrees_of_freedom()
     */
     return dof;
 }
+
+int main(int argc, char** argv)
+{
+    vector<string> js = joints();
+    vector<int> dof = degrees_of_freedom();
+    for(auto j: js) {
+    	cout << j << endl;
+    }
+    for(auto d: dof) {
+        cout << d << endl;
+    }
+}
                     `
                 },
                 {
                     id: 1,
+                    route: "cspace",
                     name: "Configuration Space",
                     image: "https://roborank.s3-us-west-1.amazonaws.com/moebius_surface.jpg",
                     description: [
@@ -95,9 +110,9 @@ vector<int> degrees_of_freedom()
                         "The code block gives further guidance as the to the formatting requirements."
                     ],
                     code: `#include <iostream>
-#include <iostream>
 #include <memory>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
@@ -110,22 +125,38 @@ vector<string> topology()
     return topologies;
 }
 
-vector<int> workspace()
+vector<string> workspace()
 {
-    vector<int> workspace;
+    vector<string> workspace;
     /*
         Return the workspace topologies of the next two items using the same abbreviated format as the topologies() function.
     */
     return workspace;
 }
 
-vector<int> taskspace()
+vector<string> taskspace()
 {
-    vector<int> taskspace;
+    vector<string> taskspace;
     /*
         Return the taskspace topology of the last item using the same abbreviated format as the topologies() function.
     */
     return taskspace;
+}
+
+int main(int argc, char** argv)
+{
+    vector<string> top = topology();
+    vector<string> ws = workspace();
+    vector<string> ts = taskspace();
+    for(auto t: top) {
+    	cout << t << endl;
+    }
+    for(auto w: ws) {
+        cout << w << endl;
+    }
+    for(auto s: ts) {
+        cout << s << endl;
+    }
 }
                     `
                 }

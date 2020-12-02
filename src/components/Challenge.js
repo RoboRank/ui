@@ -95,7 +95,7 @@ export default function ChallengeCard(props) {
                 />
             </Card>)
             )}
-            <CodeBlock code={props.challenge.code}/>
+            <CodeBlock code={props.challenge.code} route={props.challenge.route}/>
         </div>
     )
 };
